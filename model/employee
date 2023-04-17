@@ -1,0 +1,17 @@
+const Mongoose=require("mongoose")
+//model for schema
+const empSchema=new Mongoose.Schema(
+    {
+        name:{
+            type:String,
+            required:true},
+        location: String,
+        position:String,
+        Salary:Number
+    }
+)
+//model for student
+const empModel=Mongoose.model(
+    "Employee",empSchema
+);
+module.exports={empModel}
