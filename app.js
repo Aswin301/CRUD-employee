@@ -64,6 +64,7 @@ app.delete('/api/employeelist/:id', async (req,response)=>{
 //TODO: Update  a employee data from db by using api '/api/employeelist'
 //Request body format:{name:'',location:'',position:'',salary:''}
 app.put('/api/employeelist',async (req,res)=>{
+  
     let data=await empModel.findOneAndUpdate({"id":req.body.id},req.body)
     res.json(data)
 })
